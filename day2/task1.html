@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 1</title>
+</head>
+<style>
+    body{
+        background-color: rgb(255, 255, 255);
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(122, 181, 232);
+        color: white;
+    }
+    .navdiv{
+        font-size: 20px;
+        margin: 10px;
+    }
+    .navloc ul{
+        display: flex;
+        padding: 0px;
+        margin: 0px;
+    }
+    .navloc li{
+        list-style: none;
+        padding: 10px;
+        display: block;
+        justify-content: space-evenly;
+    }
+    .navloc li:hover{
+        background-color: rgb(0, 0, 0);
+    }
+    .first-row{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        margin: 1px;
+        
+    }
+    .res-img{
+        display: flex;
+        background-color: rgb(255, 255, 255);
+        border-style: solid;
+        padding: 20px 20px;
+        margin: 5px;
+        
+        
+    }
+    img{
+        max-width: 100%;
+        
+    }
+    .res-para{
+        background-color: rgb(44, 42, 42);
+        width: 50%;
+        height: 100%;
+        padding: 20px 20px;
+        margin: 5px;
+    }
+    .res-para p{
+        display: flex;
+        text-align: justify;
+        color: white;
+    }
+    .sec-row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width:100%;
+        background-color: rgb(220, 227, 241);
+        
+    }
+    .sec-row div{
+        max-width: 100%;
+        height: 100%;
+    }
+    video{
+        max-width: 30%;
+        margin: 10px;
+    }
+    
+    .co-3 p{
+        color: white;
+        text-align: justify;
+    }
+    .co-4 img{
+        max-width: 100%;
+    }
+    
+    table th{
+        background-color: rgb(113, 192, 234);
+    }
+    tr{
+        background-color: rgb(246, 144, 107);
+    }
+
+    .four-row{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgb(187, 187, 232);
+    }
+    .cols-2{
+        display: flex;
+        border-style: solid;
+        margin: 10px;
+        padding: 10px;
+    }
+    .choice-col{
+        color: rgb(5, 5, 6);
+        padding: 2px;   
+    }
+
+    .thi-row{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .paragraph{
+        
+        text-align: justify;
+        padding: 20px;
+        width: 50%;
+        
+    }
+    .image{
+        max-width: 30%;
+        margin: 10px;
+    }
+
+    form input{
+    display: block;
+    }
+</style>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">DEAD LIFT</div>
+        <div class="navloc">
+            <ul>
+                <li>HOME</li>
+                <li>ABOUT</li>
+                <li>CONTACT</li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="first-row">
+        <div class="res-img">
+            <img src="google.jpg" alt="image">
+        </div>
+        <div class="res-para">
+            <p>
+                Google was founded on September 4, 1998, by American computer scientists Larry Page and Sergey Brin while they were PhD students at Stanford University in California.
+                Together, they own about 14% of its publicly listed shares and control 56% of its stockholder voting power through super-voting stock.
+                The company went public via an initial public offering (IPO) in 2004. In 2015, Google was reorganized as a wholly owned subsidiary of Alphabet Inc. 
+                Google is Alphabet's largest subsidiary and is a holding company for Alphabet's internet properties and interests. Sundar Pichai was appointed CEO of Google on October 24, 2015, 
+                replacing Larry Page, who became the CEO of Alphabet. 
+                On December 3, 2019, Pichai also became the CEO of Alphabet.
+                
+            </p>
+        </div>
+    </div>
+
+    <div class="sec-row">
+        <div class="video1">
+            <video src="video1.mp4" controls></video>
+            <video src="video2.mp4" controls></video>
+            <video src="video3.mp4" controls></video>
+        </div>
+    </div>
+
+    <div class="thi-row">
+        <div class="column-log">
+            <form class="form-box">
+                <h2>Login</h2>
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" name="email" required>
+                
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="password" required>
+                
+                <label for="login-otp">OTP:</label>
+                <input type="text" id="login-otp" name="otp" required>
+                
+                <label for="login-captcha">Captcha:</label>
+                <input type="text" id="login-captcha" name="captcha" required>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        
+        <div class="column-reg">
+            <form class="form-box">
+                <h2>Register</h2>
+                <label for="register-name">Name:</label>
+                <input type="text" id="register-name" name="name" required>
+                
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" name="email" required>
+                
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" name="password" required>
+                
+                <label for="register-confirm-password">Confirm Password:</label>
+                <input type="password" id="register-confirm-password" name="confirm-password" required>
+                
+                <label for="register-country">Country:</label>
+                <select id="register-country" name="country" required>
+                    <option value="">Select a country</option>
+                    <option value="USA">United States</option>
+                    <option value="CAN">Canada</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="AUS">Australia</option>
+                    
+                </select>
+                
+                <input type="submit" value="Register">
+            </form>
+        </div>
+        
+        <div class="column paragraph">
+            <p>The cat (Felis catus), commonly referred to as the domestic cat or house cat, is a small domesticated carnivorous mammal.
+                It is the only domesticated species of the family Felidae. Recent advances in archaeology and genetics have shown that 
+                the domestication of the cat occurred in the Near East around 7500 BC. It is commonly kept as a house pet and farm cat,
+                 but also ranges freely as a feral cat avoiding human contact. Valued by humans for companionship and its ability to kill
+                  vermin, the cat's retractable claws are adapted to killing small prey like mice and rats..It has a strong, flexible body, 
+                  quick reflexes, and sharp teeth, and its night vision and sense of smell are well developed. It is a social species, but a 
+                  solitary hunter and a crepuscular predator. Cat communication includes vocalizations like meowing, purring, trilling, hissing, 
+                  growling, and grunting as well as cat body language. It can hear sounds too faint or too high in frequency for human ears, such 
+                  as those made by small mammals. It secretes and perceives pheromones.
+
+                </p>
+        </div>
+        
+        <div class="column image">
+            <img src="cat.jpg" alt="cat-image">
+        </div>
+    </div>
+    <div class="four-row">
+        <div class="tables">
+            <table class="tab1" border = "1">
+                <tr>
+                    <th>col 1</th>
+                    <th>col 2</th>
+                    <th>col 2</th>
+                    <th>col 2</th>
+                </tr>
+                <tr>
+                    <td>data 1</td>
+                    <td>data 2</td>
+                    <td>data 2</td>
+                    <td>data 2</td>
+                </tr>
+                <tr>
+                    <td>data 1</td>
+                    <td>data 2</td>
+                    <td>data 2</td>
+                    <td>data 2</td>
+                </tr>
+                <tr>
+                    <td>data 1</td>
+                    <td>data 2</td>
+                    <td>data 2</td>
+                    <td>data 2</td>
+                </tr>
+            </table>
+        </div>
+
+        <div  class="un-list">
+            <ul>
+                <li>APPLE</li>
+                <li>MANGO</li>
+                <li>BANANA</li>
+                <li>ORANGE</li>
+            </ul>
+        </div>
+
+        <div class="o-list" >
+            <ol type = "I">
+                <li>INDIA</li>
+                <li>AMERCIA</li>
+                <li>BRAZIL</li>
+                <li>JAPAN</li>
+            </ol>
+        </div>
+
+        <div class="cols-2">
+            <div class="col-ol">
+                <ol>
+                    <li>APPLE</li>
+                <li>MANGO</li>
+                <li>BANANA</li>
+                <li>ORANGE</li>
+                </ol>
+            </div>
+            <div class="col-ul">
+               <ul>
+                    <li>INDIA</li>
+                    <li>AMERCIA</li>
+                    <li>BRAZIL</li>
+                    <li>JAPAN</li>
+                </ul> 
+            </div>
+        </div>
+        <div class="choice-col">
+            copy righted    
+        </div>
+    </div>
+</body>
+</html>
