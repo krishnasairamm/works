@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="container p-5 my-5 bg-black bg-gradient text-white">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa fa-link" aria-hidden="true"></i>Link</a>
+          </li>
+          <!--<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>-->
+          <li class="nav-item">
+            <a class="nav-link active" href="#"><i class="fa fa-phone-square" aria-hidden="true"></i> Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa fa-globe" aria-hidden="true"></i>Web</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa fa-briefcase" aria-hidden="true"></i>Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa fa-share-square" aria-hidden="true"></i>Share</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  </div>
+  <div class="container bg-white bg-gradient">
+      <div class="row">
+        <div class="col">
+          <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+  
+  <script>
+  const xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+  const yValues = [55, 49, 44, 24, 15];
+  const barColors = [
+    "#b91d47",
+    "#00aba9",
+    "#2b5797",
+    "#e8c3b9",
+    "#1e7145"
+  ];
+  
+  new Chart("myChart", {
+    type: "pie",
+    data: {
+      labels: xValues,
+      datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: "World Wide Wine Production 2018"
+      }
+    }
+  });
+  </script>
+        </div>
+        <div class="col">
+          <p>In discrete mathematics, and more specifically in graph theory, a graph is a structure amounting to a set of objects in which some pairs of the objects are in some sense "related". The objects are represented by abstractions called vertices (also called nodes or points) and each of the related pairs of vertices is called an edge (also called link or line).[1] Typically, a graph is depicted in diagrammatic form as a set of dots or circles for the vertices, joined by lines or curves for the edges.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <p>The edges may be directed or undirected. For example, if the vertices represent people at a party, and there is an edge between two people if they shake hands, then this graph is undirected because any person A can shake hands with a person B only if B also shakes hands with A. In contrast, if an edge from a person A to a person B means that A owes money to B, then this graph is directed, because owing money is not necessarily reciprocated.</p>
+        </div>
+        <div class="col">
+          <canvas id="myChart2" style="width:100%;max-width:700px"></canvas>
+
+                <script>
+                const xyValues = [
+                  {x:50, y:7},
+                  {x:60, y:8},
+                  {x:70, y:8},
+                  {x:80, y:9},
+                  {x:90, y:9},
+                  {x:100, y:9},
+                  {x:110, y:10},
+                  {x:120, y:11},
+                  {x:130, y:14},
+                  {x:140, y:14},
+                  {x:150, y:15}
+                ];
+
+                new Chart("myChart2", {
+                  type: "scatter",
+                  data: {
+                    datasets: [{
+                      pointRadius: 4,
+                      pointBackgroundColor: "rgb(0,0,255)",
+                      data: xyValues
+                    }]
+                  },
+                  options: {
+                    legend: {display: false},
+                    scales: {
+                      xAxes: [{ticks: {min: 40, max:160}}],
+                      yAxes: [{ticks: {min: 6, max:16}}],
+                    }
+                  }
+                });
+                </script>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <canvas id="myChart3" style="width:100%;max-width:600px"></canvas>
+
+          <script>
+          const xValues3 = [100,200,300,400,500,600,700,800,900,1000];
+
+          new Chart("myChart3", {
+            type: "line",
+            data: {
+              labels: xValues3,
+              datasets: [{ 
+                data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+                borderColor: "red",
+                fill: false
+              }, { 
+                data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+                borderColor: "green",
+                fill: false
+              }, { 
+                data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+                borderColor: "blue",
+                fill: false
+              }]
+            },
+            options: {
+              legend: {display: false}
+            }
+          });
+          </script>
+
+        </div>
+        <div class="col">Two edges of a graph are called adjacent if they share a common vertex. Two edges of a directed graph are called consecutive if the head of the first one is the tail of the second one. Similarly, two vertices are called adjacent if they share a common edge (consecutive if the first one is the tail and the second one is the head of an edge), in which case the common edge is said to join the two vertices. An edge and a vertex on that edge are called incident.</div>
+      </div>
+      <div class="row">
+        <div class="col">
+          Sometimes, graphs are allowed to contain loops, which are edges that join a vertex to itself. To allow loops, the pairs of vertices in E must be allowed to have the same node twice. Such generalized graphs are called graphs with loops or simply graphs when it is clear from the context that loops are allowed.
+
+Generally, the vertex set V is taken to be finite (which implies that the edge set E is also finite). Sometimes infinite graphs are considered, but they are usually viewed as a special kind of binary relation, because most results on finite graphs either do not extend to the infinite case or need a rather different proof.
+        </div>
+        <div class="col">
+          <canvas id="myChart4" style="width:100%;max-width:600px"></canvas>
+
+<script>
+const xValues4 = ["Italy", "France", "Spain", "USA", "Argentina"];
+const yValues4 = [55, 49, 44, 24, 15];
+const barColors4 = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("myChart4", {
+  type: "doughnut",
+  data: {
+    labels: xValues4,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues4
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "World Wide Wine Production 2018"
+    }
+  }
+});
+</script>
+
+        </div>
+      </div>
+      </div>
+  </div>
+</body>
+</html>
