@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVA SCRIPT</title>
+</head>
+<body>
+    <input type="number" id="myage" value="">
+    <button  onclick="b1()">Check Result</button>
+    <br><hr>
+    <h1>MULTIPLY</h1>
+    <input type="number" value="" id="one">
+    <input type="number" value="" id="two">
+    <button onclick="b2()">RESULT</button>
+</body>
+    <script>
+        function b1(){
+            
+            var a = document.getElementById('myage').value;
+            if(a>18){
+                alert("Yes you're a VOTER..!!");
+            }
+            else{
+                alert("YOU UNDER AGED KID...CAN'T VOTE");
+            }
+        }
+
+        function b2(){
+            var n1 = document.getElementById('one').value;
+            var n2 = document.getElementById('two').value; 
+            
+            var result = n1*n2;
+            alert('Answe is ' + result);
+        }
+        
+    </script>
+</html>

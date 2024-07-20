@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY 5</title>
+</head>
+<body>
+    <p id="hello" onclick="helloworld()">HELLO WORLD get out</p>
+    <button type="button" id="andhra"value="LOGIN" onclick="andhra()">LOGIN</button>
+    <button type="button" id="ap"value="CLICK" onclick="alert('Clicked Successfully..!!!!!!')">CLICK ME</button>
+
+    <button onclick="how()">CLICK FOR CONFIRM POP-UP</button>
+    <p id="how" >HOW ARE YOU?</p>
+
+
+</body>
+    <script>
+        function helloworld(){
+
+          document.getElementById('hello') .innerHTML= "HAPPY SUNDAY";
+        }
+        function andhra(){
+
+        document.getElementById('andhra') .innerHTML= "Welcome To Chalapathi";
+        }
+
+        console.log('I dont know you')
+        document.write('GET OUUUTTTTTT')
+
+        function how(){
+            
+            var a;
+
+            if(confirm('Answer meeeeeee.........')){
+                a="Im Fine(evil laugh)";
+            }
+            else{
+                a='Not at all fine'
+            }
+            
+            document.getElementById('how').innerHTML = a;
+        }
+
+    </script>
+</html>

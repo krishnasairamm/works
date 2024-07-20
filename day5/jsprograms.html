@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS PROGRAMS</title>
+</head>
+<body>
+    <button onclick="b1()">Show Me</button>
+    <p id="para"></p>
+</body>
+    <script>
+        function b1(){
+
+            let i, j, n = 5; 
+                for(i = 1; i <= n; i++) 
+                { 
+                    let ch = 65; 
+                    for(j = 1; j <= i; j++) 
+                    { 
+                        document.getElementById('para').innerHTML+= String.fromCharCode(ch) + " "; 
+                        ch++; 
+                    } 
+                    document.getElementById('para').innerHTML+="<br/>"; 
+                } 
+        }
+    </script>
+</html>
