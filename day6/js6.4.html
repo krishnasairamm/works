@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS6 4</title>
+    <h1>STRING METHODS</h1>
+
+    <input type="number" placeholder="No. of Lemons" value="" id="lemons">
+    <button onclick="resultbutton()">ENTER</button>
+    <p id="result"></p>
+</head>
+<body>
+    <script>
+        
+        // using if else
+        function resultbutton(){
+            var res = document.getElementById('lemons').value;
+            var res = Number(res);
+            let final = (res < 0) ? "Please enter positive data" : (Number.isInteger(res) && (res < 21))?(21-lemons) : ""
+            
+            
+        }
+   
+    </script>
+</body>
+</html>
