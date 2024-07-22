@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <script src="./script.js"></script>
+</head>
+<body onload="createCaptcha()">
+    <div class="container">
+        <div class="con-login">
+            
+            <form class="login-form" onsubmit="validateCaptcha()">
+                <h1>LOGIN</h1>
+                    <label for="">Email</label>
+                    <input type="email" name="email" id="email">
+                
+                
+                    <label for="">Password</label>
+                    <input type="password" name="password" id="pw">
+
+                    <label for="">Otp</label>
+                    <input type="text" name="otp" id="otp">
+
+                    
+                    <div id="captcha"></div>
+                    <input type="text" name="cap" id="cpatchaTextBox" placeholder="CAPTCHA">
+                    <button type="submit">Verify</button>
+
+                    <input type="button" name="sb" id="sb" value="SUBMIT">
+                    
+                    
+            </form>
+        </div>
+        <div class="con-reg">
+            
+            <form class="reg-form">
+                <h1>REGISTER</h1>
+                <label for="">Name</label>
+                    <input type="name" name="name" id="name">
+
+                    <label for="">Email</label>
+                    <input type="email" name="email" id="email">
+                
+                
+                    <label for="">Password</label>
+                    <input type="password" name="password" id="pw">
+                
+                
+                    <label for="">Confirm Password</label>
+                    <input type="password" name="password" id="cpw">
+
+                    <label for="">Select your Country </label>
+                    <select name="country" id="contry" >
+                        <option value="">India</option>
+                        <option>America</option>
+                        <option>Finland</option>
+                        <option value="">United Kingdom</option>
+                        <option value="">Zimbabwe</option>
+                    </select>
+                    <label>Do you have passport ?</label>
+                <div class="radio-button">
+                    <input type="radio" name="yes" id="rb">YES
+                    <input type="radio" name="yes" id="rb">NO
+                </div>
+                <div class="check-box">
+                    <input type="checkbox" name="cb" id="cb">I hereby declare that all the information given 
+                    above is true and correct to the best of my knowledge...
+                </div>
+                <input type="button" name="sb" id="sb" value="REGISTER">
+                
+            </form>
+        </div>
+        
+
+        </div>
+    </div>
+</body>
+</html>

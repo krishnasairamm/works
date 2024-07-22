@@ -1,0 +1,105 @@
+body{
+    background-color: rgb(243, 245, 242);
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   
+
+}
+.con-login{
+    
+    background-color: rgb(45, 179, 241);
+    border-style: solid;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+    
+}
+form{
+    width: 500px;
+    height: 500px;    
+    padding: 50px;
+    align-content: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 8px 15px;
+    
+    
+}
+form h1{
+    text-align: center;
+    border-bottom: 2px solid;
+    
+}
+form label{
+    display: flex;
+    margin-top: 20px;
+    
+}
+form input{
+    width: 50%;
+    height: 25px;
+    border: none;
+    border: 1px solid rgb(92, 89, 89);
+    border-radius: 5px;
+}
+input[type="button"]{
+    width: 50%;
+    height: 25px;
+    margin-top: 20px;
+    background-color: rgb(45, 179, 241);
+    
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+}
+.con-reg{
+    background-color: rgb(45, 179, 241);
+    border-style: solid;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px;
+}
+input[type="radio"]{
+    width: 15px;   
+
+}
+.radio-button{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+input[type="checkbox"]{
+    width: 15px;
+}
+.check-box{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* CAPTCHA CSS */
+
+input[type=text] {
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button{
+  background-color: #4CAF50;
+  border-radius: 20px;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+canvas{
+  /*prevent interaction with the canvas*/
+  pointer-events:none;
+}
+
