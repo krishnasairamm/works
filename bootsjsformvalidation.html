@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration and Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" href="#scrollspyHeading1">First</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#scrollspyHeading2">Second</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+          <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+          <li><button class="dropdown-item btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRegister" aria-controls="offcanvasRegister">Register</button></li>
+          <li><button class="dropdown-item btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLogin" aria-controls="offcanvasLogin">Login</button></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+    <h4 id="scrollspyHeading1">First heading</h4>
+    <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
+    <h4 id="scrollspyHeading2">Second heading</h4>
+    <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
+    <h4 id="scrollspyHeading3">Third heading</h4>
+    <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
+    <h4 id="scrollspyHeading4">Fourth heading</h4>
+    <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
+    <h4 id="scrollspyHeading5">Fifth heading</h4>
+    <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
+  </div>
+
+  <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="offcanvasRegister" aria-labelledby="offcanvasRegisterLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasRegisterLabel">Register</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        <h1>Registration Form</h1>
+        <div class="container">
+          <form name='registration' id="registerForm" onSubmit="return formValidation();">
+            <ul>
+              <li><label for="userid">User id:</label></li>
+              <li><input type="text" name="userid" size="12" /></li>
+              <li><label for="passid">Password:</label></li>
+              <li><input type="password" name="passid" size="12" /></li>
+              <li><label for="username">Name:</label></li>
+              <li><input type="text" name="username" size="30" /></li>
+              <li><label for="address">Address:</label></li>
+              <li><input type="text" name="address" size="30" /></li>
+              <li><label for="country">Country:</label></li>
+              <li><select name="country">
+                <option selected="" value="Default">(Please select a country)</option>
+                <option value="1">Australia</option>
+                <option value="2">Canada</option>
+                <option value="3">India</option>
+                <option value="4">Russia</option>
+                <option value="5">USA</option>
+              </select></li>
+              <li><label for="zip">ZIP Code:</label></li>
+              <li><input type="text" name="zip" /></li>
+              <li><label for="email">Email:</label></li>
+              <li><input type="email" name="email" size="30" /></li>
+              <li><label id="gender">Sex:</label></li>
+              <li><input type="radio" name="gsex" value="Male" checked/><span>Male</span></li>
+              <li><input type="radio" name="gsex" value="Female" /><span>Female</span></li>
+              <li><label>Language:</label></li>
+              <li><input type="checkbox" name="en" value="en"  /><span>English</span></li>
+              <li><input type="checkbox" name="nonen" value="noen" checked/><span>Non English</span></li>
+              <li><label for="phone">Phone number:</label></li>
+              <li><input type="text" name="phn" /></li>
+              <li><label for="desc">About:</label></li>
+              <li><textarea name="desc1" id="desc2"></textarea></li>
+              <li><input type="submit" name="submit" value="Submit" /></li>
+            </ul>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="offcanvasLogin" aria-labelledby="offcanvasLoginLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasLoginLabel">Login</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        <h1>Login Form</h1>
+        <div class="container">
+          <form name='login' id="loginForm" onSubmit="return formValidation();">
+            <ul>
+              <li><label for="loginUserId">User id:</label></li>
+              <li><input type="text" name="loginUserId" size="12" /></li>
+              <li><label for="loginPassId">Password:</label></li>
+              <li><input type="password" name="loginPassId" size="12" /></li>
+              <li><input type="submit" name="loginSubmit" value="Login" /></li>
+            </ul>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
