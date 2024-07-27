@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>JavaScript Form Validation using a sample registration form</title>
+<meta name="keywords" content="example, JavaScript Form Validation, Sample registration form" />
+<meta name="description" content="This document is an example of JavaScript Form Validation using a sample registration form. " />
+<link rel='stylesheet' href='style.css' type='text/css' />
+<script src="script.js"></script>
+</head>
+
+
+<body onload="document.registration.userid.focus();">
+<h1>Registration Form</h1>
+Use tab keys to move from one input field to the next.
+<div class="container">
+<form name='registration' id="zaheer"
+ onSubmit="return formValidation();">
+<ul>
+<li><label for="userid">User id:</label></li>
+<li><input type="text" name="userid" size="12" /></li>
+<li><label for="passid">Password:</label></li>
+<li><input type="password" name="passid" size="12" /></li>
+<li><label for="username">Name:</label></li>
+<li><input type="text" name="username" size="30" /></li>
+<li><label for="address">Address:</label></li>
+<li><input type="text" name="address" size="30" /></li>
+<li><label for="country">Country:</label></li>
+<li><select name="country">
+<option selected="" value="Default">(Please select a country)</option>
+<option value="1">Australia</option>
+<option value="2">Canada</option>
+<option  value="3">India</option>
+<option value="4">Russia</option>
+<option value="5">USA</option>
+</select></li>
+<li><label for="zip">ZIP Code:</label></li>
+<li><input type="text" name="zip" /></li>
+<li><label for="email">Email:</label></li>
+<li><input type="email" name="email" size="30" /></li>
+
+
+<li><label id="gender">Sex:</label></li>
+<li><input type="radio" name="msex" value="Male" checked/><span>Male</span></li>
+<li><input type="radio" name="fsex" value="Female" /><span>Female</span></li>
+<li><label>Language:</label></li>
+<li><input type="checkbox" name="en" value="en"  /><span>English</span></li>
+<li><input type="checkbox" name="nonen" value="noen" checked/><span>Non English</span></li>
+<li><label for="desc">About:</label></li>
+<li><textarea name="desc1" id="desc2"></textarea></li>
+
+
+
+<li><input type="submit" name="submit" value="Submit" /></li>
+
+
+</ul>
+</form>
+</div>
+</body>
+</html>

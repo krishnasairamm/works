@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY 7.1</title>
+
+</head>
+<body>
+    <form action=""><label for="">Try you're luck : </label>
+        <input type="number" placeholder="Enter number" id="num">
+        <button onclick="check()">SUBMIT</button>
+        <p id="result"></p>
+    </form>
+
+    
+    </div>
+</body>
+<script>
+    function check(){
+    
+        var input  = document.getElementById('num').value;
+        var rannum = Math.floor((Math.random() * 10) + 1);
+
+        if(rannum == input){
+            alert( "LUCKY" );
+        }
+        else{
+            alert("UNLUCKY " + rannum);
+        }
+    }
+</script>
+<style>
+    
+</style>
+</html>
