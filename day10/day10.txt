@@ -1,0 +1,51 @@
+DAY - 10
+
+------------------------------------------
+
+
+CREATE DATABASE ciet
+CREATE TABLE student(sid int(5) PRIMARY KEY AUTO_INCREMENT,sname varchar(15) NOT NULL,address text NULL,phone varchar(10) UNIQUE,dob date NULL,salary float(5,2) NOT NULL,email varchar(20) UNIQUE)
+
+INSERT INTO student(sname,address,phone,dob,salary,email) VALUES('zaheer','kashmir','9876545678','2024-07-26',888.75,'jaheer@gmail.com')
+
+INSERT INTO student(sname,address,phone,dob,salary,email) VALUES('narasimha','guntur','1234567891','2000-07-14',777.75,'narasimha@gmail.com'),('gopi','tamilnadu','3456789121','1995-09-15',999.75,'gopi@gmail.com'),('siva','Andra','5678912341','1997-01-16',666.75,'siva@gmail.com'),('mrs siva','delhi','6789012341','1998-09-17',555.75,'mrssiva@gmail.com')
+
+SELECT * FROM student
+
+SELECT * FROM student WHERE address='guntur'
+
+SELECT * FROM student WHERE salary=777.75
+SELECT * FROM student WHERE sname LIKE 'n%'
+SELECT * FROM student WHERE sname LIKE 'n%n'
+SELECT * FROM student WHERE sname LIKE 'n____o%a'
+SELECT * FROM student WHERE dob LIKE '___09%'
+SELECT sname,salary FROM student where salary=(SELECT MAX(salary) FROM student)
+SELECT sname,salary FROM student where salary=(SELECT MIN(salary) FROM student)
+SELECT * FROM student where dob BETWEEN '1995-01-01' AND '2000-12-31'
+SELECT * FROM student ORDER BY salary DESC LIMIT 3
+DESCRIBE student
+SELECT * FROM student WHERE phone IS NULL
+
+Day 10: MongoDB
+
+show dbs
+
+use balaji
+
+show collections
+db.createUser({user:"balaji",pwd:"1234",roles:["readwrite","dbAdmin"]});
+
+//new
+db.createUser({user:"balaji",pwd:"1234",roles:[{ role: "clusterAdmin", db: "admin" },
+                { role: "readAnyDatabase", db: "admin" },
+                "readWrite"]});
+
+db.createCollection('customers');
+
+show collections
+
+db.customers.insertOne({first_name:"balaji",last_name:"srinivasan",age:33});
+
+db.customers.find();
+
+db.customers.insertMany([{first_name:"mohan",last_name:"joseph",age:18},{first_name:"jeno",last_name:"williams",age:25},{first_name:"khan",last_name:"mohammad",age:15}]);
