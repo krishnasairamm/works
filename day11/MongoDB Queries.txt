@@ -1,0 +1,32 @@
+DAY 11 
+
+JSON FORMATTER AND VALIDATOR 
+
+db.customer.updateOne({age: 30},{$set:{"name":"abc"}})
+db.customer.updateOne({"name": "lmn"},{$set:{email: "lmn@gmail.com",address:"IND"}})
+db.customer.updateMany({"name":"abc"},{$set: {age:25,dob: 2003-07-09}})
+db.customer.updateMany({name:"abc",name:"def"},{$set: {age:26}})
+db.customer.updateMany({},{$set: {address:"AUS"}})
+db.customer.updateOne({name:"abc"},{$set:{aadhar: "123174314",pan: "haqed34waq"}},{upsert:true})
+db.customer.updateOne({age: {$lt: 25}},{$set: {address: 'IND'}})
+db.customer.find({age: {$ne: 26}})
+
+$lt = less than operator 
+$gt = greater than operator 
+$lte = lessthan or equal to operator
+$gte = greater than or equal to operator 
+$eq = equals to 
+$ne = not equals to
+$in = in operator
+$nin = not in operator  
+
+db.customer.updateMany({},{$set:{$inc: {salary:2000}}) -->increments the salary of all documents
+db.customer.updateMany({},{$set: {city:[{hobbies: "Swimming", "reading"}]}})
+db.customer.updateMany({},{$set: {hobbies:["Playing", "reading"]}})
+db.customer.find({hobbies: {$all: ["Playing", "reading"]}})
+db.customer.find().limit(3)
+db.customer.find().sort({salary:1}) --> Sorts in ascending order based on salary
+db.customer.find().sort({salary:-1}) --> Sorts in descending order based on salary
+db.customer.find().count() --> Counts the no of records present in collection
+db.customer.find({age:26}).count() --> Counts the records whose age=26
+db.customer.find().limit(3).sort({salary:-1}) --> gives top three records based on salary
