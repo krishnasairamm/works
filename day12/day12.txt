@@ -1,0 +1,161 @@
+DAY-12
+--------------------------------------------
+
+--------------------------------------------
+
+
+INSERT ONE
+-----------------
+db.student.insertOne({
+    _id : 1,
+    name:"balaji",
+    age:37,
+    salary:25000,
+    gst:12.75,
+    adhar:123456789123,
+    dob:ISODate("2020-05-18T14:10:30.000Z"),
+    address : [{"city": "salem"},{"pincode": 636009}],
+    courses : ["Python", "MongoDB"],
+    createdAt: new Date(),
+    updatedAt: new Date()
+});
+
+------------------
+INSERT MANY
+------------------
+db.student.insertOne({
+    _id : 1,
+    name:"balaji",
+    age:37,
+    salary:25000,
+    gst:12.75,
+    adhar:123456789123,
+    dob:ISODate("2020-05-18T14:10:30.000Z"),
+    address : [{"city": "salem"},{"pincode": 636009}],
+    courses : ["Python", "MongoDB"],
+    createdAt: new Date(),
+    updatedAt: new Date()
+});
+
+
+db.student.insertMany(
+{
+    _id : 2,
+    name:"manoj",
+    age:20,
+    salary:35000,
+    gst:14.75,
+    adhar:333456789123,
+    dob:ISODate("2021-05-18T14:10:30.000Z"),
+    address : [{"city": "ooty"},{"pincode": 636008}],
+    courses : ["Php", "Java"],
+    createdAt: new Date(),
+    updatedAt: new Date()
+},
+{
+    _id : 3,
+    name:"sathya",
+    age:25,
+    salary:45000,
+    gst:11.75,
+    adhar:444456789123,
+    dob:ISODate("2019-06-15T14:10:30.000Z"),
+    address : [{"city": "chennai"},{"pincode": 620001}],
+    courses : ["Python", "Java"],
+    createdAt: new Date(),
+    updatedAt: new Date()
+},
+{
+    _id : 4,
+    name:"jeevan-lazy",
+    age:70,
+    salary:55000,
+    gst:11.75,
+    adhar:555456789123,
+    dob:ISODate("2018-02-10T14:10:30.000Z"),
+    address : [{"city": "guntur"},{"pincode": 636001}],
+    courses : ["Python", "Oracle"],
+    createdAt: new Date(),
+    updatedAt: new Date()
+},
+{
+    _id : 5,
+    name:"zaheer",
+    age:37,
+    salary:65000,
+    gst:8.75,
+    adhar:666456789123,
+    dob:ISODate("2012-02-10T14:10:30.000Z"),
+    address : [{"city": "vijayawada"},{"pincode": 636008}],
+    courses : ["Python", "Oracle"],
+    createdAt: new Date(),
+    updatedAt: new Date()
+},
+{
+    _id : 6,
+    name:"Mrslazy",
+    age:25,
+    salary:85000,
+    gst:7.75,
+    adhar:777456789123,
+    dob:ISODate("2002-02-10T14:10:30.000Z"),
+    address : [{"city": "vijayawada"},{"pincode": 636008}],
+    courses : ["Python", "MongoDB"],
+    createdAt: new Date(),
+    updatedAt: new Date()
+}
+
+);
+
+
+-----------
+
+db.student.updateMany({},{$set:{email:"abc@gmail.com",phone:9898989898}})
+
+-------------------------
+db.student.updateOne({_id:6},{$set:{salary:100000}})
+----------------------------
+
+AGGREGATE
+--------
+
+db.student.aggregate([
+  { $count: "age" }
+]);
+
+db.student.aggregate([
+  {
+    $group: {
+      _id: null,
+      minPrice: { $min: "$age" },
+      maxPrice: { $max: "$age" }
+    }
+  }
+]);
+
+---
+db.student.aggregate([
+  {
+    $group: {
+      _id: null,
+      minSalary: { $min: "$salary" },
+      maxSalary: { $max: "$salary" }
+    }
+  }
+]);
+
+---
+db.student.aggregate([
+  {
+    $group: {
+      _id: null,
+      totalRevenue: { $sum: { $multiply: ["$age", "$salary"] } },
+      averagePrice: { $avg: "$age" }
+    }
+  }
+]);
+---
+ADMIN
+------------------------
+db.createUser({user:"superadmin",pwd:"123456",roles:[{role:"userAdminAnyDatabase",db:"admin"},"readWriteAnyDatabase"]})
+-
