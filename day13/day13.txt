@@ -1,0 +1,67 @@
+-------------------------------
+DAY - 13
+-------------------------------
+
+
+
+
+db.createUser({ user: "perfectAdmin", pwd: "123456", roles: [{ role: "userAdminAnyDatabase", db: "admin" } });
+
+------
+ROLES
+-----
+db.createRole({ role: "userAnyDatabase", privileges: [ { resource: { db: "ciet", collection: "" }, actions: [ "find", "update", "insert", "remove" ] } ], roles: [] });
+
+---
+
+db.getRoles()
+
+---
+db.createRole({ role: "balajiAnyDatabase", privileges: [ { resource: { db: "ciet", collection: "" }, actions: [ "find", "update", "insert", "remove" ] } ], roles: [] });
+--
+db.stats()
+-----
+db.salaries.aggregate([
+  {
+    $match: {
+      amount: { $gt: 50000,$lte: 75000 },
+    }
+  }
+]);
+------
+db.employees.aggregate([
+    { $match:{ gender:'Male'}},
+    { $group:{ _id:'$departmentId', totalStudent: { $sum:1 } }
+}])
+------
+db.employees.find({dateOfBirth: "1992-07-10"});
+---
+db.employees.find({dateOfBirth: {$gt:"1985-01-01",$lt:"1990-01-01"}});
+
+---
+
+db.employees.find({dateOfBirth:{$regex:".08."}})
+----
+
+----------------------------------------------------------------------
+                             SCHEMA CREATION
+----------------------------------------------------------------------
+
+db.createCollection("department", {
+  validator: { 
+    $jsonSchema: {
+      bsonType: "object",
+      required: [ "depname", "email" ],
+      properties: {
+        depname: {
+          bsonType: "string",
+          description: "must be a string and is required"
+        },
+        email: {
+          bsonType: "string",
+          description: "must be a string and is required"
+        }
+      }
+    }
+  }
+});
