@@ -1,0 +1,19 @@
+{
+  "name": "ramnodejsproject",
+  "version": "1.0.0",
+  "description": "creating api",
+  "main": "server.js",
+  "scripts": {
+    "test": "basic npm commands"
+  },
+  "keywords": [
+    "node",
+    "npm",
+    "console"
+  ],
+  "author": "ram",
+  "license": "ISC",
+  "dependencies": {
+    "upper-case": "^3.0.0"
+  }
+}

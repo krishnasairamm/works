@@ -1,0 +1,70 @@
+
+$project : 
+----------------------------------------------------
+db.employees.aggregate([            
+    {
+    $project:{
+        "employeeId":1,
+        "firstName":1,
+        "lastName":1,
+    }
+    },
+    {
+        $limit : 5
+    }
+
+]);
+
+-------------------------------
+db.employees.aggregate([
+    {
+    $project:{
+        "employeeId":0,
+        "firstName":0,
+        "lastName":0,
+    }
+    },
+    {
+        $limit : 5
+    }
+
+]);
+---------------------------------
+$lookup:
+------------------------------------------------------------------------
+db.books.insertMany([{"bid":1,"bname":"java"},{"bid":2,"bname":"cpp"},{"bid":3,"bname":"python"}])
+----------------------------------
+
+db.author.insertMany([{"aid":1,"aname":"balaji","bo_id":ObjectId('66a8e5e7d8ee471782712a05')},{"aid":2,"aname":"mohan"},{"aid":3,"aname":"jeno"}])
+------------------------
+db.author.aggregate({$lookup:{from:"books",
+            localField:"bo_id",
+            foreignField:"_id",
+            as: "bookDetails"}})
+-------------------------------------
+db.employees.updateMany({},{$set:{salary:200}})
+
+db.employees.aggregate([
+  {
+    $group: {
+      _id: "$departmentId",
+      totalSales: { $sum: "$salary" }
+    }
+  },
+  {
+    $out: "totalSales"
+  }
+])
+
+db.employees.aggregate([
+  {
+    $project: {
+      "employeeId": 1,
+      "firstName": 1,
+      "lastName": 1
+    }
+  },
+  {
+    $limit: 5
+  }
+])
