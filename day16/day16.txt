@@ -1,0 +1,51 @@
+DAY 16
+------------
+
+Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Mongoose supports Node.js and Deno (alpha).
+
+---------------
+npm install mongoose
+--------------
+Importing
+// Using Node.js `require()`
+const mongoose = require('mongoose');
+
+// Using ES6 imports
+import mongoose from 'mongoose';
+----------------
+Passport-Local Mongoose is a Mongoose plugin that simplifies building username and password login with Passport.
+
+
+passport-local-mongoose = for authentication purpose;
+
+--------
+Installation
+> npm install passport-local-mongoose
+
+----------------
+Parse incoming request bodies in a middleware before your handlers, available under the req.body property.
+
+body-parser = getting values from ui form
+
+npm install body-parser
+
+to access = req.body.Alicename  ---------to get form data
+
+it is limited...
+--------
+for many fields use multer 
+-------
+npm install multer
+---------------------------
+
+express() package used for API creation
+
+---------
+app.set("view engine","ejs") ---- calling template engine
+
+-------------------
+
+localhost:3000 = parent API
+---------------
+POST = Insertion process OR Creaion
+
