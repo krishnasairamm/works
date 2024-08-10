@@ -1,0 +1,111 @@
+// 1. $lookup:
+db.student.aggregate([
+    {
+        $lookup: {
+            from: "courses",
+            localField: "sid",
+            foreignField: "studentId",
+            as: "enrolledCourses"
+        }
+    }
+])
+
+// 2. $expr:
+db.student.aggregate([
+    {
+        $match: {
+            $expr: { $gte: ["$sage", 21] }
+        }
+    }
+])
+
+// 3. $project: 
+db.student.aggregate([
+    {
+        $project: {
+            "sname": 1,
+            "sage": 1,
+            "subjects": 1,
+            "isAdult": { $gte: ["$sage", 18] }
+        }
+    }
+])
+
+// 4. $merge: 
+db.student.aggregate([
+    {
+        $group: {
+            _id: "$sage",
+            totalStudents: { $sum: 1 }
+        }
+    },
+    {
+        $merge: {
+            into: "ageGroups",
+            whenMatched: "merge",
+            whenNotMatched: "insert"
+        }
+    }
+])
+
+// 5. $limit: 
+db.student.aggregate([
+    { $limit: 5 }
+])
+
+// 6. $search: 
+db.student.aggregate([
+    {
+        $search: {
+            "text": {
+                "query": "Math",
+                "path": "subjects"
+            }
+        }
+    }
+])
+
+// 7. $sort: 
+db.student.aggregate([
+    { $sort: { "sage": -1 } }
+])
+
+// 8. $sortByCount: 
+db.student.aggregate([
+    { $unwind: "$subjects" },
+    { $sortByCount: "$subjects" }
+])
+
+// 9. $skip: 
+db.student.aggregate([
+    { $skip: 2 }
+])
+
+// 10. $group: 
+db.student.aggregate([
+    {
+        $group: {
+            _id: "$sage",
+            averageAge: { $avg: "$sage" },
+            students: { $push: "$sname" }
+        }
+    }
+])
+
+// 11. $out: 
+db.student.aggregate([
+    {
+        $group: {
+            _id: "$sage",
+            totalStudents: { $sum: 1 }
+        }
+    },
+    {
+        $out: "studentAgeStats"
+    }
+])
+
+// 12. $match: 
+db.student.aggregate([
+    { $match: { "subjects": "Math" } }
+])
