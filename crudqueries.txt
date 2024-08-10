@@ -1,0 +1,64 @@
+1. Insert One
+
+db.student.insertOne({
+    "sid": 1,
+    "sname": "Alice",
+    "sage": 20,
+    "subjects": ["Math", "Physics", "Chemistry"]
+})
+
+
+2. Insert many
+
+db.student.insertMany([
+    {
+        "sid": 2,
+        "sname": "Bob",
+        "sage": 21,
+        "subjects": ["Biology", "Chemistry", "Math"]
+    },
+    {
+        "sid": 3,
+        "sname": "Charlie",
+        "sage": 22,
+        "subjects": ["Physics", "Math", "Computer Science"]
+    }
+])
+
+3. Find All 
+
+db.student.find({})
+
+4. Find many
+
+db.student.findOne({ "sid": 2 })
+
+5. Update one
+
+db.student.updateOne(
+    { "sid": 1 },
+    { $set: { "sage": 21 } }
+)
+6. Update many
+
+db.student.updateMany(
+    { "sage": 21 },
+    { $set: { "sage": 22 } }
+)
+
+
+7. Delete one
+
+db.student.deleteOne({ "sid": 3 })
+
+8. Delete many
+
+db.student.deleteMany({ "sage": { $lt: 22 } })
+
+9. Limit
+
+db.student.find().limit(3)
+
+10. Sort
+
+db.student.find().sort({age:-1})
