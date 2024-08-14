@@ -1,0 +1,14 @@
+{
+    "cmid": 1,
+    "cmname": "Oneee",
+    "cmdob": "2004-02-01",
+    "mstatus": false, 
+    "cmsalary": 20000000,
+    "email": "onee@gmail.com",
+    "address": [
+        {
+            "city": "Some City",
+            "pincode": "420420"
+        }
+    ]
+}
