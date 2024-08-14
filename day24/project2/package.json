@@ -1,0 +1,29 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "crud project2",
+  "main": "server.js",
+  "scripts": {
+    "test": "crud application",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/server.js",
+    "client": "npm start --prefix client"
+  },
+  "keywords": [
+    "client",
+    "server",
+    "json",
+    "express",
+    "mongoose",
+    "cors",
+    "axios",
+    "body-parser"
+  ],
+  "author": "krishna",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^2.0.15"
+
+  }
+}
