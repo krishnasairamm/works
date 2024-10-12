@@ -1,0 +1,14 @@
+{
+  "name": "crackers-website",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "concurrently": "^9.0.1",
+    "react-bootstrap": "^2.10.5"
+  },
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "cd server && npm start",
+    "dev": "concurrently \"npm run client\" \"npm run server\""
+  }
+}
