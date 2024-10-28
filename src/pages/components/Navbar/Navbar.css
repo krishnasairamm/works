@@ -1,0 +1,51 @@
+.nav-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+
+.nav-div h1{
+    display: flex;
+    color: white;
+    margin: 5px;
+    padding: 5px;
+    
+}
+.nav-content{
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    
+    
+}
+
+.nav-h1 {
+    font-style: italic;
+    text-decoration: none;
+    transition: letter-spacing 0.2s ease-in; 
+    padding: 5px; 
+}
+
+.nav-h1:hover {
+    letter-spacing: 2px;
+}
+
+.nav-content  button{
+    margin: 5px;
+    padding: 5px;
+    background-color: transparent;
+    border: 0px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    font-weight: bold;
+}
+
+.nav-content button:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 5px;
+    
+}
